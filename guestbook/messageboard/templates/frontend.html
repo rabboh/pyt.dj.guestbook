@@ -9,6 +9,7 @@
 
             <section id="message-formular">
                 <form action="" method="post">
+                    {% csrf_token %}
                     <ul>
                         <li>Your (nick)name<span class="mandatory">*</span>:</li>
                         <li><input type="text" name="nickname" /></li>
@@ -22,7 +23,13 @@
             </section>
 
             <section id="latest-messages">
-
+                {% for entry in entries %}
+                <div class="entry">
+                    <h3><a href="mailto:{{ entry.email }}">{{ entry.nickname }}</a></h3>
+                    <span class="date">{{ entry.postdate }}</span>
+                    <div class="messagebody">{{ entry.message }}</div>
+                </div>
+                {% endfor %}
             </section>
 
         </div>
