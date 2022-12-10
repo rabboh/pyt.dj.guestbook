@@ -1,12 +1,14 @@
-{% load static %}
-<!DOCTYPE html>
+{% load static %}<!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="UTF-8">
         <title>Guestbook</title>
-        <script src="{% static 'messageboard.js' %}"></script>
+        <script src="{% static 'main.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'static.css' %}" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+
     <body>
         <div id="container">
 
@@ -16,13 +18,13 @@
                 <form action="" method="post">
                     {% csrf_token %}
                     <ul>
-                        <li>Your (nick)name<span class="mandatory">*</span>:</li>
-                        <li><input type="text" name="nickname" /></li>
-                        <li>Your e-mail:</li>
-                        <li><input type="text" name="email" /></li>
-                        <li>Your message:<span class="mandatory">*</span>:</li>
-                        <li><textarea name="message"></textarea></li>
-                        <li><input type="submit" value="Send" /></li>
+                        <li class="caption">Your (nick)name<span class="mandatory">*</span>:</li>
+                        <li class="field"><input type="text" name="nickname" /></li>
+                        <li class="caption">Your e-mail:</li>
+                        <li class="field"><input type="text" name="email" /></li>
+                        <li class="caption">Your message:<span class="mandatory">*</span>:</li>
+                        <li class="field"><textarea name="message"></textarea></li>
+                        <li class="submitter"><input type="submit" value="Send" /></li>
                     </ul>
                 </form>
             </section>
@@ -38,6 +40,6 @@
             </section>
 
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
     </body>
+
 </html>

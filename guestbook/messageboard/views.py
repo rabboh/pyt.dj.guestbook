@@ -12,7 +12,7 @@ def index(request):
         newEntry = Messageboard(nickname=nickname, email=email, message=message)
         newEntry.save()
 
-    entries = Messageboard.objects.all().values()
+    entries = Messageboard.objects.all().values().order_by('-postdate')
     context = {
         'entries': entries
     }
