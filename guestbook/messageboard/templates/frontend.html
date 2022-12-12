@@ -30,13 +30,19 @@
             </section>
 
             <section id="latest-messages">
-                {% for entry in entries %}
-                <div class="entry">
-                    <h3><a href="mailto:{{ entry.email }}">{{ entry.nickname }}</a></h3>
-                    <span class="date">{{ entry.postdate }}</span>
-                    <div class="messagebody">{{ entry.message }}</div>
-                </div>
-                {% endfor %}
+                {% if entries %}
+                    {% for entry in entries %}
+                    <div class="entry {% cycle 'odd' 'even' %}">
+                        <h3><a href="mailto:{{ entry.email }}">{{ entry.nickname }}</a></h3>
+                        <span class="date">{{ entry.postdate }}</span>
+                        <div class="messagebody">{{ entry.message }}</div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="no-entries">
+                        <i>No entries yet</i>
+                    </div>
+                {% endif %}
             </section>
 
         </div>

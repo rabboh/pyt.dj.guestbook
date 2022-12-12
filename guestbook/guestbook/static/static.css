@@ -49,3 +49,40 @@ h1 {
     height: 80px;
 }
 
+div.no-entries {
+    margin-left: 10px;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+
+.entry {
+    padding: 10px;
+}
+
+.entry.even {
+    background: #e8ebeb;
+}
+
+.entry h3 {
+    margin: 0;
+}
+
+.entry h3 a {
+    color: forestgreen;
+    text-decoration: none;
+}
+
+.entry h3 a:hover {
+    text-decoration: underline;
+}
+
+span.date {
+    font-weight: bold;
+    font-family: monospace;
+    display: block;
+}
+
+.messagebody {
+    line-height: 1.5em;
+    margin-top: 7px;
+}
