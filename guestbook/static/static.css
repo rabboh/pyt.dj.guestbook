@@ -86,3 +86,8 @@ span.date {
     line-height: 1.5em;
     margin-top: 7px;
 }
+
+.mandatory {
+    color: pink;
+    margin-left: 3px;
+}

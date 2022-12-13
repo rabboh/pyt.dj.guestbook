@@ -18,11 +18,11 @@
                 <form action="" method="post">
                     {% csrf_token %}
                     <ul>
-                        <li class="caption">Your (nick)name<span class="mandatory">*</span>:</li>
+                        <li class="caption">Your (nick)name<span class="mandatory">*</span></li>
                         <li class="field"><input type="text" name="nickname" /></li>
-                        <li class="caption">Your e-mail:</li>
+                        <li class="caption">Your e-mail<span class="mandatory">*</span></li>
                         <li class="field"><input type="text" name="email" /></li>
-                        <li class="caption">Your message:<span class="mandatory">*</span>:</li>
+                        <li class="caption">Your message<span class="mandatory">*</span></li>
                         <li class="field"><textarea name="message"></textarea></li>
                         <li class="submitter"><input type="submit" value="Send" /></li>
                     </ul>

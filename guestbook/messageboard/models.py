@@ -5,4 +5,5 @@ class Messageboard(models.Model):
     email = models.CharField(max_length=255)
     message = models.CharField(max_length=255)
     postdate = models.DateField(auto_now=True)
+    posttime = models.TimeField(auto_now=True)
     
