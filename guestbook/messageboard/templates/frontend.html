@@ -34,7 +34,7 @@
                     {% for entry in entries %}
                     <div class="entry {% cycle 'odd' 'even' %}">
                         <h3><a href="mailto:{{ entry.email }}">{{ entry.nickname }}</a></h3>
-                        <span class="date">{{ entry.postdate }}</span>
+                        <span class="date">{{ entry.postdate|date:"c" }} {{ entry.posttime|date:"H:i:s" }}</span>
                         <div class="messagebody">{{ entry.message }}</div>
                     </div>
                     {% endfor %}
